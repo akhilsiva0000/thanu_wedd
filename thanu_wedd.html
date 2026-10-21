@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#173f32">
+<meta name="description" content="A warm, elegant wedding invitation for Ashin & Vrinda.">
+<title>Ashin & Vrinda — Wedding Invitation</title>
+<style>
+:root{--forest:#173f32;--deep:#0d2b23;--gold:#c7a568;--cream:#fbf7ef;--paper:#fffdf8;--ink:#33453b;--muted:#718075;--line:#e8dfcf}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.65}
+button,a{font:inherit}
+a{color:inherit}
+.top-note{background:var(--deep);color:#f6e8c8;text-align:center;padding:10px 16px;font-size:.9rem;letter-spacing:.08em}
+.hero{min-height:90vh;display:grid;place-items:center;text-align:center;padding:64px 20px;position:relative;overflow:hidden;color:#fff9ed;background:radial-gradient(ellipse at 50% 0%,#3b6a52 0%,var(--forest) 45%,var(--deep) 100%)}
+.hero:before,.hero:after{content:"❧";position:absolute;color:#d4b87d;opacity:.23;font-size:clamp(150px,28vw,330px);line-height:1;pointer-events:none}
+.hero:before{left:-55px;top:12%;transform:rotate(-28deg)}
+.hero:after{right:-55px;bottom:4%;transform:rotate(150deg)}
+.hero-inner{position:relative;z-index:1;max-width:760px;width:100%}
+.om{font-size:1.15rem;color:#e6cf9d;letter-spacing:.12em;margin-bottom:22px}
+.eyebrow{text-transform:uppercase;letter-spacing:.24em;font:500 .72rem/1.8 Arial,sans-serif;color:#e4d1a7}
+h1,h2,h3,p{margin-top:0}
+.hero h1{font-size:clamp(3rem,9vw,6.6rem);line-height:1.02;font-weight:400;margin:20px 0 18px;letter-spacing:-.045em}
+.amp{color:#d8bd83;font-style:italic}
+.hero-date{font: .9rem/1.8 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#f1e6d0}
+.ornament{display:flex;align-items:center;justify-content:center;gap:12px;color:var(--gold);margin:26px auto}
+.ornament:before,.ornament:after{content:"";width:70px;height:1px;background:currentColor}
+.primary-btn{display:inline-flex;align-items:center;gap:10px;border:1px solid #d6bc82;color:#fff8e9;background:rgba(255,255,255,.06);padding:14px 23px;border-radius:999px;text-decoration:none;cursor:pointer;transition:.25s}
+.primary-btn:hover{background:#d6bc82;color:var(--deep);transform:translateY(-2px)}
+.tap-note{font: .7rem Arial,sans-serif;letter-spacing:.16em;color:#d7c9a9;margin-top:12px;text-transform:uppercase}
+main{overflow:hidden}
+.section{padding:82px 20px}
+.wrap{max-width:960px;margin:auto}
+.center{text-align:center}
+.kicker{font: .72rem Arial,sans-serif;text-transform:uppercase;letter-spacing:.24em;color:#9b7b42;margin-bottom:10px}
+h2{font-size:clamp(2rem,5vw,3.4rem);font-weight:400;color:var(--forest);line-height:1.15;margin-bottom:18px}
+h3{color:var(--forest);font-weight:400}
+.intro{max-width:700px;margin:0 auto 30px;color:#647166}
+.invite-card{max-width:760px;margin:38px auto 0;padding:clamp(28px,6vw,60px);background:var(--paper);border:1px solid var(--line);outline:1px solid #f1e8d8;outline-offset:7px;box-shadow:0 18px 50px #3b35200d;text-align:center;position:relative}
+.invite-card:before,.invite-card:after{content:"✦";position:absolute;color:var(--gold);font-size:1.1rem}
+.invite-card:before{top:15px;left:18px}.invite-card:after{bottom:15px;right:18px}
+.invite-card .family{font-size:1.05rem}
+.couple-names{font-size:clamp(2.6rem,7vw,4.3rem);line-height:1.08;color:var(--forest);margin:22px 0}
+.couple-names span{display:block;font-size:1.25rem;color:#ad8d53;font-style:italic;margin:8px}
+.invite-card .details{color:#677369;font-size:.98rem}
+.countdown{background:#f2eadb;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.count-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:620px;margin:28px auto}
+.count-box{padding:18px 8px;background:#fffaf1;border:1px solid #e4d7bf}
+.count-box strong{display:block;font-size:clamp(1.8rem,5vw,2.7rem);font-weight:400;color:var(--forest);line-height:1.2}
+.count-box span{font: .65rem Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase;color:#8d7853}
+.actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:22px}
+.action-link{border:1px solid #cdbb99;padding:10px 16px;border-radius:4px;text-decoration:none;font: .8rem Arial,sans-serif;color:var(--forest);background:#fffaf2}
+.action-link:hover{background:var(--forest);color:#fff}
+.events{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:40px;text-align:left}
+.event{padding:30px;background:var(--paper);border:1px solid var(--line);position:relative}
+.step{font: .7rem Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#a4844b}
+.event h3{font-size:1.65rem;margin:12px 0 5px}
+.event .subtitle{color:#9b7b42;font-style:italic}
+.event .time{display:inline-block;margin:14px 0;padding:7px 10px;background:#f4eddf;color:var(--forest);font: .78rem Arial,sans-serif}
+.event p{font-size:.95rem;color:#677369}
+.tagline{font-size:.72rem!important;letter-spacing:.06em;color:#9a7b45!important}
+.venue-panel{margin-top:35px;padding:36px;background:var(--forest);color:#fff9ed;display:grid;grid-template-columns:1.3fr .7fr;gap:28px;align-items:center}
+.venue-panel h3{font-size:2rem;color:#fff4d9;margin-bottom:10px}
+.venue-panel p{color:#e4e5d7;margin-bottom:10px}
+.venue-panel .action-link{display:inline-block;margin:8px 8px 0 0}
+.qr-placeholder{aspect-ratio:1;max-width:180px;width:100%;margin:auto;background:#fffdf8;color:var(--forest);display:grid;place-items:center;text-align:center;padding:15px;border:8px solid #ead8b2;font: .75rem Arial,sans-serif;letter-spacing:.08em}
+.qr-placeholder .qr-icon{font-size:3rem;line-height:1.2}
+.hosts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:700px;margin:34px auto 0}
+.host{background:var(--paper);border:1px solid var(--line);padding:24px}
+.host h3{font-size:1.35rem;margin-bottom:3px}
+.host small{color:var(--muted);font: .75rem Arial,sans-serif}
+.host a{display:inline-block;margin-top:14px;text-decoration:none;color:#fff;background:var(--forest);padding:9px 15px;border-radius:999px;font: .78rem Arial,sans-serif}
+footer{text-align:center;background:var(--deep);color:#e7d8b5;padding:35px 18px;font-size:.85rem}
+footer .hash{font: .7rem Arial,sans-serif;letter-spacing:.15em;margin-top:12px}
+.back-top{position:fixed;right:18px;bottom:18px;width:42px;height:42px;border-radius:50%;border:1px solid #c9b27d;background:#fffaf0;color:var(--forest);cursor:pointer;box-shadow:0 4px 18px #0002;z-index:5}
+@media(max-width:680px){.hero{min-height:82vh}.section{padding:62px 18px}.events,.hosts{grid-template-columns:1fr}.venue-panel{grid-template-columns:1fr;text-align:center;padding:28px 20px}.count-grid{gap:7px}.count-box{padding:14px 3px}.count-box span{letter-spacing:.08em;font-size:.58rem}.invite-card{padding:35px 22px}.hero:before{left:-100px}.hero:after{right:-100px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="top-note">॥ ശ്രീ ഗണേശായ നമഃ ॥</div>
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div class="om">॥ श्री गणेशाय नमः ॥</div>
+    <div class="eyebrow">An auspicious wedding invitation</div>
+    <p style="margin:14px 0 0;color:#e8dcc2">The Wedding Celebration of</p>
+    <h1>Ashin <span class="amp">&amp;</span><br>Vrinda</h1>
+    <div class="ornament">✦</div>
+    <p class="hero-date">Sunday · 06 September 2026 · Puthencruz</p>
+    <button class="primary-btn" id="openInvite">💌 Open Wedding Invitation <span>✧</span></button>
+    <div class="tap-note">Tap to unveil the invitation</div>
+  </div>
+</header>
+<main>
+<section class="section" id="invitation">
+  <div class="wrap center">
+    <div class="kicker">✦ We are getting married ✦</div>
+    <h2>A day of love, family &amp; blessings</h2>
+    <p class="intro">With grateful hearts, we invite you to join us as we begin our forever together.</p>
+    <article class="invite-card">
+      <div class="om">॥ ശ്രീ ഗണേശായ നമഃ ॥</div>
+      <p class="family">Mrs. Sheeja Ajith Kumar &amp; Mr. Ajith Kumar<br><span class="details">Ambalathingal House, Vadakkathara Road, Poonithura P.O., Pettah</span></p>
+      <p>cordially invite your esteemed presence with family<br>on the occasion of the marriage of their son</p>
+      <div class="couple-names">Ashin <span>Weds</span> Vrinda</div>
+      <p class="details">(D/o Mrs. Sini K. Damodharan &amp; Mr. Sudhakaran,<br>Kunnumpurathu House, B.P.C. College Jn., Mulakkulam North, Piravom)</p>
+      <div class="ornament">❦</div>
+      <p><strong>Sunday, 6th September 2026</strong><br><span class="details">(1202 Chingam – 21)</span></p>
+      <p>at <strong>Pet Rose Event Centre</strong><br>Pathammile, Puthencruz</p>
+      <p>and for Lunch thereafter</p>
+      <p class="details"><strong>Muhurtham:</strong> Between 11:59 a.m. and 12:20 p.m.</p>
+      <p class="details">With best wishes<br>Rajamma Padmanabhan · Abhin Ajith</p>
+    </article>
+  </div>
+</section>
+<section class="section countdown" id="countdown">
+  <div class="wrap center">
+    <div class="kicker">Counting down to the auspicious moment</div>
+    <h2>Sunday, 06 September 2026</h2>
+    <div class="count-grid" aria-live="polite">
+      <div class="count-box"><strong id="days">—</strong><span>Days</span></div>
+      <div class="count-box"><strong id="hours">—</strong><span>Hours</span></div>
+      <div class="count-box"><strong id="mins">—</strong><span>Mins</span></div>
+      <div class="count-box"><strong id="secs">—</strong><span>Secs</span></div>
+    </div>
+    <div id="countMessage" class="details">A beautiful new chapter begins.</div>
+    <div class="actions">
+      <a class="action-link" id="googleCal" target="_blank" rel="noopener">📅 Add to Google Calendar</a>
+      <a class="action-link" href="wedding-invitation.ics" download="ashin-vrinda-wedding.ics" id="icsLink"> Apple / Outlook (.ics)</a>
+    </div>
+  </div>
+</section>
+<section class="section" id="celebrations">
+  <div class="wrap">
+    <div class="center"><div class="kicker">Auspicious celebrations</div><h2>Ceremony &amp; Feast</h2><p class="intro">Two special moments, one unforgettable day. Your presence will make our celebration complete.</p></div>
+    <div class="events">
+      <article class="event">
+        <div class="step">Step 01</div><h3>Wedding Muhurtham</h3><div class="subtitle">Sacred Thalikettu &amp; Divine Rituals</div>
+        <div class="time">⏰ 11:59 AM – 12:20 PM</div>
+        <p>Join us for the auspicious wedding ceremony, sacred Thalikettu, exchanging floral garlands, and receiving blessings from family and elders.</p>
+        <p class="tagline">✦ Traditional Rites · Sacred Thalikettu · Elders’ Blessings</p>
+        <a class="action-link venue-map" target="_blank" rel="noopener">🗺️ View Venue Location</a>
+      </article>
+      <article class="event">
+        <div class="step">Step 02</div><h3>Celebration Feast &amp; Lunch</h3><div class="subtitle">Grand Wedding Sadhya &amp; Fellowship</div>
+        <div class="time">⏰ Thereafter · 12:30 PM onwards</div>
+        <p>Celebrate with a traditional Kerala wedding Sadhya, joyful conversations, photo moments, and heartfelt congratulations to the couple.</p>
+        <p class="tagline">✦ Royal Kerala Sadhya · Photos · Fellowship &amp; Joy</p>
+        <a class="action-link venue-map" target="_blank" rel="noopener">🗺️ View Venue Location</a>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="section" id="venue" style="background:#f2eadb">
+  <div class="wrap center"><div class="kicker">Location &amp; directions</div><h2>Pet Rose Event Centre</h2>
+    <div class="venue-panel">
+      <div><h3>We’ll meet you there</h3><p>Pathammile, Vadayampady P.O., Puthencruz,<br>Ernakulam, Kerala 682308</p>
+        <a class="action-link venue-map" target="_blank" rel="noopener">🗺️ Open Google Maps</a>
+        <a class="action-link" id="appleMaps" target="_blank" rel="noopener"> Apple Maps</a>
+        <button class="action-link" id="copyAddress">📋 Copy Address</button>
+        <p id="copyStatus" style="font-size:.8rem;margin-top:10px" aria-live="polite"></p>
+      </div>
+      <div class="qr-placeholder"><div><div class="qr-icon">⌗</div><strong>VENUE LOCATION</strong><br><span>Tap “Open Google Maps” for directions</span></div></div>
+    </div>
+  </div>
+</section>
+<section class="section" id="wishes">
+  <div class="wrap center"><div class="kicker">Warm wishes &amp; blessings</div><h2>With Best Wishes</h2><p class="intro">Reach out to the hosts to send your love, greetings, and blessings to Ashin &amp; Vrinda.</p>
+    <div class="hosts">
+      <article class="host"><h3>Rajamma Padmanabhan</h3><small>Family Host</small><br><a class="phone-link" data-phone="9497679581">☎ Call / WhatsApp</a></article>
+      <article class="host"><h3>Abhin Ajith</h3><small>Family Host</small><br><a class="phone-link" data-phone="8590758807">☎ Call / WhatsApp</a></article>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div style="font-size:1.5rem">❦</div><div>With best wishes: Rajamma Padmanabhan, Abhin Ajith &amp; Families</div><div class="hash">#ASHINWEDSVRINDA · SEPTEMBER 06, 2026</div><div style="margin-top:18px;opacity:.7">Made with ♥ to celebrate a beautiful beginning</div></footer>
+<button class="back-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script>
+const venueAddress = "Pet Rose Event Centre, Pathammile, Vadayampady P.O., Puthencruz, Ernakulam, Kerala 682308";
+const mapSearch = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(venueAddress);
+document.querySelectorAll(".venue-map").forEach(a => a.href = mapSearch);
+document.getElementById("appleMaps").href = "https://maps.apple.com/?q=" + encodeURIComponent(venueAddress);
+document.querySelectorAll(".phone-link").forEach(a => {const phone=a.dataset.phone;a.href="https://wa.me/91"+phone;a.target="_blank";a.rel="noopener";});
+document.getElementById("openInvite").addEventListener("click",()=>document.getElementById("invitation").scrollIntoView({behavior:"smooth"}));
+document.getElementById("copyAddress").addEventListener("click",async()=>{const status=document.getElementById("copyStatus");try{await navigator.clipboard.writeText(venueAddress);status.textContent="Address copied to clipboard."}catch(e){status.textContent=venueAddress}});
+const start = new Date(2026,8,6,11,59,0).getTime();
+function updateCountdown(){let diff=start-Date.now();if(diff<=0){["days","hours","mins","secs"].forEach(id=>document.getElementById(id).textContent="0");document.getElementById("countMessage").textContent="Today is the day — let the celebrations begin!";return}const d=Math.floor(diff/86400000),h=Math.floor(diff%86400000/3600000),m=Math.floor(diff%3600000/60000),s=Math.floor(diff%60000/1000);document.getElementById("days").textContent=d;document.getElementById("hours").textContent=String(h).padStart(2,"0");document.getElementById("mins").textContent=String(m).padStart(2,"0");document.getElementById("secs").textContent=String(s).padStart(2,"0");document.getElementById("countMessage").textContent="Until the wedding muhurtham · Local venue time"}
+updateCountdown();setInterval(updateCountdown,1000);
+const eventTitle="Wedding of Ashin & Vrinda",eventDetails="Wedding Muhurtham 11:59 AM–12:20 PM, followed by lunch. Venue: "+venueAddress;
+const gcal=new URL("https://calendar.google.com/calendar/render");gcal.searchParams.set("action","TEMPLATE");gcal.searchParams.set("text",eventTitle);gcal.searchParams.set("dates","20260906T065900Z/20260906T072000Z");gcal.searchParams.set("details",eventDetails);gcal.searchParams.set("location",venueAddress);document.getElementById("googleCal").href=gcal.toString();
+const ics="BEGIN:VCALENDAR\\r\\nVERSION:2.0\\r\\nPRODID:-//Ashin and Vrinda//Wedding Invitation//EN\\r\\nBEGIN:VEVENT\\r\\nUID:ashin-vrinda-wedding-20260906@example.com\\r\\nDTSTAMP:20260101T000000Z\\r\\nDTSTART:20260906T065900Z\\r\\nDTEND:20260906T072000Z\\r\\nSUMMARY:Wedding of Ashin & Vrinda\\r\\nLOCATION:"+venueAddress+"\\r\\nDESCRIPTION:"+eventDetails+"\\r\\nEND:VEVENT\\r\\nEND:VCALENDAR";
+const blob=new Blob([ics],{type:"text/calendar;charset=utf-8"});document.getElementById("icsLink").href=URL.createObjectURL(blob);
+</script>
+</body>
+</html>
